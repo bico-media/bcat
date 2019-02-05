@@ -37,6 +37,15 @@ The `1ChDHzdd1H4wSjgGMHyndZm6qxEDGjqpJL` bitcom namespace must have 1 argument o
 1. data
 
 
+### Hints
+
+The 3rd argument to a bat transaction is `hint` and contains a string with a comma-separated list of instructions in the sequence of how to deal with data after it has been concatenated. At the moment there is only one possible hint: `base64`.
+
+#### Hinting `base64`
+
+When a bat transaction gives the hint `base64` the content must be base64 decoded before processed further. 
+
+
 ## Definition
 
 If you provide content from the blockchain you are compatible with the B://at protocol if
@@ -47,13 +56,6 @@ If you provide content from the blockchain you are compatible with the B://at pr
 
 
 
-### Hints
-
-The 3rd argument to a bat transaction is `hint` and contains a string with a comma-separated list of instructions in the sequence of how to deal with data after it has been concatenated. At the moment there is only one possible hint: `base64`.
-
-#### Hinting `base64`
-
-When a bat transaction gives the hint `base64` the content must be base64 decoded before processed further. 
 
 ----
 
