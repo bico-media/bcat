@@ -4,7 +4,8 @@ Status: draft
 
 > Let's get a common way of providing large files by having data spread amongst transactions.
 
-This document describes the protocol "B://at" (pronounced _bat_). Please share [inputs and comments](https://github.com/bico-media/bat/issues).
+This document describes a protocol named "B://at" (pronounced _bat_). 
+Please share [inputs and comments](https://github.com/bico-media/bat/issues).
 
 Please note that this protocol is only relevant if the data larger than the limit of transactions size. If data fits within one transaction **always use the [B://](https://b.bitdb.network) format** for storing your file. 
 
@@ -53,3 +54,7 @@ The 3rd argument to a bat transaction is `hint` and contains a string with a com
 #### Hinting `base64`
 
 When a bat transaction gives the hint `base64` the content must be base64 decoded before processed further. 
+
+----
+
+Please share [inputs and comments](https://github.com/bico-media/bat/issues).
