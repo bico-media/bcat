@@ -41,7 +41,7 @@ The `1ChDHzdd1H4wSjgGMHyndZm6qxEDGjqpJL` bitcom namespace must have 1 argument o
 
 If you provide content from the blockchain you are compatible with the B://at protocol if
 
-- A client requesting the content of a bat transaction will receive the concatenated data from `TX1`, `TX2` ... `TXn` after being treated by hints provided in the requested tx. 
+- A client requesting the content of a bat transaction will receive the concatenated data from `TX1`, `TX2` ... `TXn` that has also been subject to any transformatoin provided by hints in the requested transaction. 
 
 - The concatenation of data from `TX1`, `TX2` ... `TXn` is binary safe
 
