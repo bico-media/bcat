@@ -22,10 +22,10 @@ The `15DHFxWZJT58f9nhyGnsRBqrgwK4W6h4Up` bitcom namespace must have 5 or more ar
 1. A string providing the MIME type of the file
 2. A string providing the name of the file
 3. A string providing a hint about how to treat the data
-4. Transaction ID of a transaction with the first chunk of data of the file (`target TX 1`)
-5. Transaction ID of a transaction with the second chunk of data of the file (`target TX 1`)
+4. Transaction ID of a transaction with the first chunk of data of the file (`TX1`)
+5. Transaction ID of a transaction with the second chunk of data of the file (`TX2`)
 
-Any number of arguments can follow providing a sequence of transaction IDs (`target TX n`) in the order of how data is to be represented in the file. 
+Any number of arguments can follow providing a sequence of transaction IDs (`TXn`) in the order of how data is to be represented in the file. 
 
 ### Chunks of data
 
@@ -41,9 +41,9 @@ The `1ChDHzdd1H4wSjgGMHyndZm6qxEDGjqpJL` bitcom namespace must have 1 argument o
 
 If you provide content from the blockchain you are compatible with the B://at protocol if
 
-- A client requesting the content of a bat transaction will receive the concatenated content from all the target tx treated with any hints provided. 
+- A client requesting the content of a bat transaction will receive the concatenated data from `TX1`, `TX2` ... `TXn` after being treated by hints provided in the requested tx. 
 
-- The concatenation is binary safe
+- The concatenation of data from `TX1`, `TX2` ... `TXn` is binary safe
 
 
 
