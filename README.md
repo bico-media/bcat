@@ -50,9 +50,11 @@ When a bat transaction gives the hint `base64` the content must be base64 decode
 
 If you provide content from the blockchain you are compatible with the B://at protocol if
 
-- A client requesting the content of a bat transaction will receive the concatenated data from `TX1`, `TX2` ... `TXn` that has also been subject to any transformatoin provided by hints in the requested transaction. 
+- A client requesting the content of a bat transaction will receive the concatenated data from `TX1`, `TX2` ... `TXn`.
 
-- The concatenation of data from `TX1`, `TX2` ... `TXn` is binary safe
+- The concatenation of data from `TX1`, `TX2` ... `TXn` is binary safe.
+
+- The concatenated data has been subject to any transformation indicated in (`hint`) of the requested transaction.
 
 
 
