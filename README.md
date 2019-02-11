@@ -62,4 +62,4 @@ If you provide content from the blockchain you are compatible with the B://cat p
 
 ----
 
-Please share [inputs and comments](https://github.com/bico-media/bat/issues).
+Please share [inputs and comments](https://github.com/bico-media/b-cat/issues).
