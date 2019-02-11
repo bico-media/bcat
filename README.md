@@ -1,4 +1,4 @@
-Status: draft
+_Status: idea → lose draft → **draft** → proposal → release candidate → stable_
 
 # Concatenate content from the blockchain
 
@@ -7,21 +7,19 @@ Status: draft
 This document describes a protocol named "B://at" (pronounced _bat_). 
 Please share [inputs and comments](https://github.com/bico-media/bat/issues).
 
-Please note that this protocol is only relevant if the data larger than the limit of transactions size. If data fits within one transaction **always use the [B://](https://b.bitdb.network) format** for storing your file. 
+This protocol is only relevant if the data is larger than the limit of the current transaction size. If data fits within one transaction **always use the [B://](https://b.bitdb.network) format** for storing your file. 
 
 
 ## Description
-
-**This is to be discussed - it might be smarter to chain B:// files**
 
 ### Concatenating data
 
 Transactions on the blockchain that includes the bitcom namespace of `15DHFxWZJT58f9nhyGnsRBqrgwK4W6h4Up` at the first position after a `OP_RETURN` code shall be called a `bat` transactions. 
 
 The `15DHFxWZJT58f9nhyGnsRBqrgwK4W6h4Up` bitcom namespace must have 5 or more arguments:
-1. A string providing the MIME type of the file
-2. A string providing the name of the file
-3. A string providing a hint about how to treat the data
+1. A string providing the media type of the file (may include charset)
+2. A string providing the name of the file  (can be an empty string)
+3. A string providing a hint about how to treat the data (can be an empty string)
 4. Transaction ID of a transaction with the first chunk of data of the file (`TX1`)
 5. Transaction ID of a transaction with the second chunk of data of the file (`TX2`)
 
