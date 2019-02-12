@@ -5,7 +5,7 @@ Status: _idea_ → _lose draft_ → **draft** → _proposal_ → _final review_ 
 > Let's get a common way of providing large files by having data spread amongst transactions.
 
 This document describes a protocol named "B://cat" (pronounced `B-cat`). 
-Please share [inputs and comments](https://github.com/bico-media/b-cat/issues).
+Please share [inputs and comments](https://github.com/bico-media/bcat/issues).
 
 This protocol is only relevant if the data is larger than the limit of the current transaction size. If data fits within one transaction **always use the [B://](https://b.bitdb.network) format** for storing your file. 
 
@@ -30,7 +30,7 @@ Any number of arguments can follow providing a sequence of transaction IDs (`TXn
 
 Transactions referenced from a B-cat transaction will be called `B-cat parts`. Each B-cat part transaction must follow the [B://](https://b.bitdb.network) specification or the following description:
 
-Transactions on the blockchain that includes the bitcom namespace of `1ChDHzdd1H4wSjgGMHyndZm6qxEDGjqpJL` at the first position after a `OP_RETURN` code shall be called a `bat-chunk` transactions (pronounced _bachunk_). 
+Transactions on the blockchain that includes the bitcom namespace of `1ChDHzdd1H4wSjgGMHyndZm6qxEDGjqpJL` at the first position after a `OP_RETURN` code shall be called a `B-cat part` transactions (pronounced _bachunk_). 
 
 The `1ChDHzdd1H4wSjgGMHyndZm6qxEDGjqpJL` bitcom namespace must have 1 argument only:
 1. data
@@ -62,4 +62,4 @@ If you provide content from the blockchain you are compatible with the B://cat p
 
 ----
 
-Please share [inputs and comments](https://github.com/bico-media/b-cat/issues).
+Please share [inputs and comments](https://github.com/bico-media/bcat/issues).
