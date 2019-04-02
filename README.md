@@ -1,4 +1,4 @@
-Status: _idea_ → _lose draft_ → _draft_ → __proposal__ → _final review_ → _stable_
+Status: _idea_ → _lose draft_ → _draft_ → _proposal_ → __final review__ → _stable_
 
 # Concatenate content from the blockchain
 
@@ -17,15 +17,15 @@ Transactions on the blockchain that includes the bitcom namespace `15DHFxWZJT58f
 
 The `15DHFxWZJT58f9nhyGnsRBqrgwK4W6h4Up` bitcom namespace must have 7 or more arguments to be valid:
 
-1.  A string providing any unstructured `info` the sender finds relevant to share about how the B-cat transaction came to life. No longer than 128 characters (can be an empty string)
+1.  A string providing any unstructured `info` the sender finds relevant to share about how the B-cat transaction came to life. No longer than 128 characters (can be an empty string in the transaction data - but please be aware that some frameworks for BSV to create and broadcast transactions will treat an empty string as no data and then not provide any string)
 
-2. A string providing the `MIME type` of the content of the file. No longer than 64 characters
+2. A string providing the `MIME type` of the content of the file. No longer than 128 characters
 
-3. A string providing the `charset`/encoding of the file. No longer than 16 characters (can be an empty string but defaults to 'UTF-8')
+3. A string providing the `charset`/encoding of the file. No longer than 16 characters (can be an empty string after trim but defaults to 'UTF-8')
 
-4. A string providing the `name` of the file. No longer than 256 characters (can be an empty string)
+4. A string providing the `name` of the file. No longer than 256 characters (can be an empty string after trim)
 
-5. A string providing a `flag` indicating how to treat data. No longer than 16 characters (can be an empty string)
+5. A string providing a `flag` indicating how to treat data. No longer than 16 characters (can be an empty string after trim)
 
 6. 32 bytes representing the (raw) transaction ID of the transaction with the first part of data of the file (`TX1`)
 
@@ -48,7 +48,7 @@ Please note that some flags expand the list of supported formats for B-cat refer
 
 ### Flags
 
-The 3rd argument to a B-cat transaction is `flag` and contains a string with information about how to deal with data. Only one flag can be provided. A content provider is free to choose to implement support for each flag or not. It is recommended to provide a useful error messages if a valid but unsupported flag is used.
+The 3rd argument to a B-cat transaction is `flag` and contains a string with information about how to deal with data. Only one flag can be provided. A content provider is free to choose to implement support for each flag or not. It is recommended to provide a useful error messages if a valid but unsupported flag is used. (can be an empty string in the transaction data - but please be aware that some frameworks for BSV to create and broadcast transactions will treat an empty string as no data and then not provide any string)
 
 
 
@@ -100,6 +100,11 @@ If you provide content from the blockchain you are compatible with the B://cat p
 - The concatenation of data from `TX1`, `TX2` ... `TXn` is binary safe.
 
 - The handling of the concatenated data honours the description of the `flag` provided or with information letting the client know that the flag is not supported. 
+
+
+## Please note
+
+Some frameworks for BSV to create and broadcast transactions will treat an empty string as no data and then not provide a string to data. All strings in the Bcat format must be trimmed before used so sending a space will be the same as sending an empty string. 
 
 
 ----
