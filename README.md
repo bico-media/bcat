@@ -45,7 +45,7 @@ Any number of arguments can follow providing a sequence of transaction IDs (`TXn
 Example:
 
 ```
-OP_RETUR
+OP_RETURN
   15DHFxWZJT58f9nhyGnsRBqrgwK4W6h4Up
   'BSV4ever'
   'image/jpeg'
