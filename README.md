@@ -1,15 +1,15 @@
 Status: _idea_ → _rough draft_ → _draft_ → __proposal__ → _final review_ → _stable_
 
-# Concatenate content from the blockchain
+# Bcat: Concatenate content from the blockchain
 
 > Let's get a common way of providing large files by having data spread amongst transactions.
 
 This document describes a protocol named "Bcat" (pronounced `B cat`).
 Please share [inputs and comments](https://github.com/bico-media/bcat/issues).
 
-This protocol is only relevant if the data is larger than the limit of the current transaction size. If data fits within one transaction **always use the [B://](https://b.bitdb.network) format** for storing your data. With the current limit of 100KB per transaction, a regular Bcat transaction can represent a file with roughly 310MB of data (110 Gb if the content gateway supports the `nested-gzip` flag).
+This protocol is only relevant if the data is larger than the limit of the current transaction size. If data fits within one transaction **always use the [B://](https://b.bitdb.network) format** for storing your data. With the current limit of 100KB per transaction, a regular Bcat transaction can represent a file with roughly 290 MB of data (870 Gb if the content gateway supports the `nested-gzip` flag).
 
-## Description
+## Bcat protocol specification
 
 ### Concatenating data
 
@@ -94,7 +94,7 @@ An invalid Bcat transaction should return an error to the client. This includes
 - Reuse of referenced TX's
 - Any referenced TX is not in the B:// or Bcat part format (exempt addition described for `nested-gzip`)'
 
-## Definition
+## Bcat protocol definition
 
 If you provide content from the blockchain you are compatible with the Bcat protocol if
 
