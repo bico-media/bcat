@@ -7,7 +7,7 @@ Status: _idea_ → _rough draft_ → _draft_ → _proposal_ → __final review__
 This document describes a protocol named "Bcat" (pronounced `B cat`).
 Please share [inputs and comments](https://github.com/bico-media/bcat/issues).
 
-This protocol is only relevant if the data is larger than the limit of the current transaction size. If data fits within one transaction **always use the [B://](https://b.bitdb.network) format** for storing your data. With a limit of 100KB per transaction, a Bcat transaction can represent a file with roughly 290 MB of data.
+This protocol is only relevant if the data is larger than the limit of the current transaction size. If data fits within one transaction **always use the [B://](https://web.archive.org/web/20230225072641/https://b.bitdb.network/) format** for storing your data. With a limit of 100KB per transaction, a Bcat transaction can represent a file with roughly 290 MB of data.
 
 ## Bcat protocol specification
 
